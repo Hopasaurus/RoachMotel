@@ -1,6 +1,8 @@
 Time tracking:
 June 11 20:13 - Start design doc.
 June 11 20:51 - Start preparing repo and project
+June 11 21:02 - Project is setup implementing...
+
 
 Time budget:
 - design: 20-30 minutes
