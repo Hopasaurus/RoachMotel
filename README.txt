@@ -2,7 +2,7 @@ Time tracking:
 June 11 20:13 - Start design doc.
 June 11 20:51 - Start preparing repo and project
 June 11 21:02 - Project is setup implementing...
-
+June 11 21:39 - Stopping for the day, created some object and placeholders for methods
 
 Time budget:
 - design: 20-30 minutes
@@ -12,6 +12,8 @@ Time budget:
 
 Actual time:
 - design: 38ish minutes
+- setup: 11 minutes
+- implementation: 37 minutes so far.
 
 
 Reiterate requirements in brief format:
@@ -54,11 +56,12 @@ My design thoughts:
 
 
 Things:
-	Room spec:
-		Features: List<Features>
-		
+	x Room spec:
+	x 	Features: List<Features>
+	x 	I think this may not be needed.	
+
 	Reservation:
-		Guest Id
+		Guest
 		Features: List<Features>
 		Check In
 		Check Out
