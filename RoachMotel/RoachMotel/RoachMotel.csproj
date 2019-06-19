@@ -39,12 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CheckIn.cs" />
-    <Compile Include="Models\CheckOut.cs" />
-    <Compile Include="Models\Guest.cs" />
-    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Motel.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\RoomFeature.cs" />
+    <Compile Include="Models\FeatureNames.cs" />
+    <Compile Include="Repositories\MotelLoader.cs" />
     <Compile Include="Sanity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
