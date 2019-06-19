@@ -30,12 +30,12 @@ namespace RoachMotel.Models
         public void CheckIn(List<RoomFeature> requestedFeatures)
         {
             var room = FindAvailableRoom(requestedFeatures);
-            room.RemoveFeature(FeatureNames.EMPTY);
+            room.Status = Statuses.EMPTY;
         }
 
         public void CheckOut(Room room)
         {
-            room.AddFeature(FeatureNames.NEEDS_CLEANING);
+            room.Status = Statuses.NEEDS_CLEANING;
         }
 
         public void Clean()
@@ -43,15 +43,9 @@ namespace RoachMotel.Models
             // Simulate cleaning all the dirty rooms.
             // In reality house keeping would mark rooms cleaned once they are really cleaned (I hope)
 
-            var needCleaning = new List<RoomFeature>
+            foreach (var room in Rooms.Where(r => r.Status == Statuses.NEEDS_CLEANING))
             {
-                new RoomFeature(FeatureNames.NEEDS_CLEANING, decimal.Zero)
-            };
-
-            foreach (var room in Rooms.Where(r => r.HasFeatures(needCleaning)))
-            {
-                room.RemoveFeature(FeatureNames.NEEDS_CLEANING);
-                room.AddFeature(FeatureNames.EMPTY);
+                room.Status = Statuses.EMPTY;
             }
         }
     }

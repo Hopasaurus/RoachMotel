@@ -6,6 +6,7 @@ namespace RoachMotel.Models
     {
         public string RoomName { get; set; }
         public List<RoomFeature> Features { get; set; }
+        public string Status { get; set; }
 
         public bool HasFeatures(List<RoomFeature> features)
         {
@@ -17,7 +18,7 @@ namespace RoachMotel.Models
 
         public bool IsEmpty()
         {
-            return Features.Exists(f => f.Name == FeatureNames.EMPTY);
+            return Status == Statuses.EMPTY;
         }
 
         public void AddFeature(string featureName, decimal cost = decimal.Zero)

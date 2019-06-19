@@ -43,6 +43,7 @@
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\RoomFeature.cs" />
     <Compile Include="Models\FeatureNames.cs" />
+    <Compile Include="Models\Statuses.cs" />
     <Compile Include="Repositories\MotelLoader.cs" />
     <Compile Include="Sanity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
