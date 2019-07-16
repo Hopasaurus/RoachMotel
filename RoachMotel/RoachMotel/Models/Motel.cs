@@ -27,10 +27,11 @@ namespace RoachMotel.Models
             return Rooms.Where(r => r.IsEmpty() && r.HasFeatures(features));
         }
 
-        public void CheckIn(List<RoomFeature> requestedFeatures)
+        public Room CheckIn(List<RoomFeature> requestedFeatures)
         {
             var room = FindAvailableRoom(requestedFeatures);
-            room.Status = Statuses.EMPTY;
+            room.Status = Statuses.OCCUPIED;
+            return room;
         }
 
         public void CheckOut(Room room)

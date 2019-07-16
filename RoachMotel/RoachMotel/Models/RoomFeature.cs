@@ -10,5 +10,10 @@
             Name = name;
             Cost = cost;
         }
+
+        public RoomFeature(string name)
+        {
+            Name = name;
+        }
     }
 }

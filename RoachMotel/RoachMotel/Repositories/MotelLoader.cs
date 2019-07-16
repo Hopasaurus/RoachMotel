@@ -3,11 +3,11 @@ using RoachMotel.Models;
 
 namespace RoachMotel.Repositories
 {
-    public class MotelLoader
+    public static class MotelLoader
     {
         // hard coded motel, this is "Fake it 'til you make it" development
         // this is enough to get started with for now.
-        public Motel LoadMotel()
+        public static Motel LoadMotel()
         {
             return new Motel
             {
@@ -35,7 +35,7 @@ namespace RoachMotel.Repositories
             };
         }
 
-        private Room BuildRoom(string name, int bedCount, bool accessible, bool pets)
+        private static Room BuildRoom(string name, int bedCount, bool accessible, bool pets)
         {
             var features = new List<RoomFeature>
             {
