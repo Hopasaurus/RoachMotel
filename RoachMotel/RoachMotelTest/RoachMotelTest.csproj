@@ -52,8 +52,8 @@
   <ItemGroup>
     <Compile Include="SanityTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCheckIn.cs" />
-    <Compile Include="TestCheckOut.cs" />
+    <Compile Include="CheckInTest.cs" />
+    <Compile Include="CheckOutTest.cs" />
     <Compile Include="TestHelper.cs" />
   </ItemGroup>
   <ItemGroup>
