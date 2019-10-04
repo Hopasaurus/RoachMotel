@@ -39,29 +39,29 @@ namespace RoachMotel.Repositories
         {
             var features = new List<RoomFeature>
             {
-                new RoomFeature(FeatureNames.ONE_BED, 50)
+                new RoomFeature(FeatureNames.OneBed, 50)
             };
 
 
             if (bedCount > 1)
             {
-                features.Add(new RoomFeature(FeatureNames.TWO_BEDS, 25));
+                features.Add(new RoomFeature(FeatureNames.TwoBeds, 25));
             }
 
             if (bedCount > 2)
             {
-                features.Add(new RoomFeature(FeatureNames.THREE_BEDS, 15));
+                features.Add(new RoomFeature(FeatureNames.ThreeBeds, 15));
             }
 
             if (accessible)
             {
-                features.Add(new RoomFeature(FeatureNames.ACCESSIBLE, 0));
+                features.Add(new RoomFeature(FeatureNames.Accessible, 0));
             }
 
             if (pets)
             {
-                features.Add(new RoomFeature(FeatureNames.ONE_PET, 20));
-                features.Add(new RoomFeature(FeatureNames.TWO_PETS, 20));
+                features.Add(new RoomFeature(FeatureNames.OneBed, 20));
+                features.Add(new RoomFeature(FeatureNames.TwoPets, 20));
             }
 
             return new Room

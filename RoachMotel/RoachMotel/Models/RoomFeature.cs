@@ -2,18 +2,21 @@
 {
     public class RoomFeature
     {
-        public string Name { get; set; }
+        public FeatureNames Name { get; set; }
         public decimal Cost { get; set; }
 
-        public RoomFeature(string name, decimal cost)
+        public RoomFeature(FeatureNames name, decimal cost)
         {
             Name = name;
             Cost = cost;
         }
 
-        public RoomFeature(string name)
+        public RoomFeature(FeatureNames name)
         {
             Name = name;
+
+            // TODO: I put this in, but should there be a test to force it, pin it and justify it?
+            // Cost = 0;
         }
     }
 }

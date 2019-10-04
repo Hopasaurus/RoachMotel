@@ -6,6 +6,7 @@ namespace RoachMotelTest
     [TestClass]
     public class SanityTest
     {
+        // ok Hoppe, what on earth is this... I think you are putting YOUR sanity to the test.
         [TestMethod]
         public void Test_CheckInAllowedShouldReturnTrue()
         {

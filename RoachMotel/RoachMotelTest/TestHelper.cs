@@ -15,41 +15,41 @@ namespace RoachMotelTest
                     {
                         Features = new List<RoomFeature>
                         {
-                            new RoomFeature(FeatureNames.ONE_BED),
+                            new RoomFeature(FeatureNames.OneBed),
                         },
                         RoomName = "1BedA",
-                        Status = Statuses.EMPTY,
+                        Status = Statuses.Empty,
                     },
                     new Room
                     {
                         Features = new List<RoomFeature>
                         {
-                            new RoomFeature(FeatureNames.ONE_BED),
+                            new RoomFeature(FeatureNames.OneBed),
                         },
                         RoomName = "1BedB",
-                        Status = Statuses.NEEDS_CLEANING,
+                        Status = Statuses.NeedsCleaning,
                     },
                     new Room
                     {
                         Features = new List<RoomFeature>
                         {
-                            new RoomFeature(FeatureNames.ONE_BED),
-                            new RoomFeature(FeatureNames.TWO_BEDS),
+                            new RoomFeature(FeatureNames.OneBed),
+                            new RoomFeature(FeatureNames.TwoBeds),
                         },
                         RoomName = "2BedA",
-                        Status = Statuses.EMPTY,
+                        Status = Statuses.Empty,
                     },
                     new Room
                     {
                         Features = new List<RoomFeature>
                         {
-                            new RoomFeature(FeatureNames.ONE_BED),
-                            new RoomFeature(FeatureNames.TWO_BEDS),
-                            new RoomFeature(FeatureNames.THREE_BEDS),
-                            new RoomFeature(FeatureNames.ACCESSIBLE),
+                            new RoomFeature(FeatureNames.OneBed),
+                            new RoomFeature(FeatureNames.TwoBeds),
+                            new RoomFeature(FeatureNames.ThreeBeds),
+                            new RoomFeature(FeatureNames.Accessible),
                         },
                         RoomName = "3BedAndAccessible",
-                        Status = Statuses.EMPTY,
+                        Status = Statuses.Empty,
                     },
                 }
             };

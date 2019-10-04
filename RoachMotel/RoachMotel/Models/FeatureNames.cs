@@ -1,12 +1,16 @@
 ﻿namespace RoachMotel.Models
 {
-    public static class FeatureNames
+    /*
+     * These are business rules, should they be configurable???
+     * if so maybe they should revert to being strings and be pullable from a data store.
+    */
+    public enum FeatureNames
     {
-        public const string ONE_BED = "ONE_BED";
-        public const string TWO_BEDS = "TWO_BEDS";
-        public const string THREE_BEDS = "THREE_BEDS";
-        public const string ONE_PET = "TWO_PETS";
-        public const string TWO_PETS = "TWO_PETS";
-        public const string ACCESSIBLE = "ACCESSIBLE";
+        OneBed,
+        TwoBeds,
+        ThreeBeds,
+        OnePet,
+        TwoPets,
+        Accessible,
     }
 }

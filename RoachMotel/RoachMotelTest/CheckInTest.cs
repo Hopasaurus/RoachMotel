@@ -15,7 +15,7 @@ namespace RoachMotelTest
 
             var requestedFeatures = new List<RoomFeature>
             {
-                new RoomFeature(FeatureNames.ONE_BED)
+                new RoomFeature(FeatureNames.OneBed)
             };
 
             var room = motel.CheckIn(requestedFeatures);
@@ -28,28 +28,28 @@ namespace RoachMotelTest
         {
             var motel = TestHelper.BuildMotel();
 
-            Assert.AreEqual("EMPTY", motel.Rooms[0].Status);
+            Assert.AreEqual(Statuses.Empty, motel.Rooms[0].Status);
 
             var requestedFeatures = new List<RoomFeature>
             {
-                new RoomFeature(FeatureNames.ONE_BED)
+                new RoomFeature(FeatureNames.OneBed)
             };
 
             
             motel.CheckIn(requestedFeatures);
 
-            Assert.AreEqual("OCCUPIED", motel.Rooms[0].Status);
+            Assert.AreEqual(Statuses.Occupied, motel.Rooms[0].Status);
         }
 
         [TestMethod]
         public void Test_CheckInShouldNotPresentRoomsNeedingCleaning()
         {
             var motel = TestHelper.BuildMotel();
-            motel.Rooms[0].Status = Statuses.NEEDS_CLEANING;
+            motel.Rooms[0].Status = Statuses.NeedsCleaning;
 
             var requestedFeatures = new List<RoomFeature>
             {
-                new RoomFeature(FeatureNames.ONE_BED)
+                new RoomFeature(FeatureNames.OneBed)
             };
 
             var room = motel.CheckIn(requestedFeatures);
@@ -61,12 +61,12 @@ namespace RoachMotelTest
         public void Test_CheckInShouldHonorAccessibilityPreference()
         {
             var motel = TestHelper.BuildMotel();
-            motel.Rooms[0].Status = Statuses.NEEDS_CLEANING;
+            motel.Rooms[0].Status = Statuses.NeedsCleaning;
 
             var requestedFeatures = new List<RoomFeature>
             {
-                new RoomFeature(FeatureNames.ONE_BED),
-                new RoomFeature(FeatureNames.ACCESSIBLE)
+                new RoomFeature(FeatureNames.OneBed),
+                new RoomFeature(FeatureNames.Accessible)
             };
 
             var room = motel.CheckIn(requestedFeatures);
@@ -79,12 +79,12 @@ namespace RoachMotelTest
         public void Test_CheckInThrowsWhenNoRoomsMatchSpec()
         {
             var motel = TestHelper.BuildMotel();
-            motel.Rooms[0].Status = Statuses.NEEDS_CLEANING;
+            motel.Rooms[0].Status = Statuses.NeedsCleaning;
 
             var requestedFeatures = new List<RoomFeature>
             {
-                new RoomFeature(FeatureNames.ONE_BED),
-                new RoomFeature(FeatureNames.TWO_PETS)
+                new RoomFeature(FeatureNames.OneBed),
+                new RoomFeature(FeatureNames.TwoPets)
             };
 
             motel.CheckIn(requestedFeatures);

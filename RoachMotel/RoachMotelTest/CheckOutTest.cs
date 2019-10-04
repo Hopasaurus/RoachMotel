@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RoachMotel.Models;
 
 namespace RoachMotelTest
 {
@@ -11,11 +12,11 @@ namespace RoachMotelTest
             var motel = TestHelper.BuildMotel();
 
             var room = motel.Rooms[0];
-            room.Status = "FOO";  // status should probably be turned into an enum
+            room.Status = Statuses.Empty;
 
             motel.CheckOut(room);
 
-            Assert.AreEqual("NEEDS_CLEANING", motel.Rooms[0].Status);
+            Assert.AreEqual(Statuses.NeedsCleaning, motel.Rooms[0].Status);
         }
     }
 }

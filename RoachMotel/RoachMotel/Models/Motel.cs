@@ -30,13 +30,13 @@ namespace RoachMotel.Models
         public Room CheckIn(List<RoomFeature> requestedFeatures)
         {
             var room = FindAvailableRoom(requestedFeatures);
-            room.Status = Statuses.OCCUPIED;
+            room.Status = Statuses.Occupied;
             return room;
         }
 
         public void CheckOut(Room room)
         {
-            room.Status = Statuses.NEEDS_CLEANING;
+            room.Status = Statuses.NeedsCleaning;
         }
 
         public void Clean()
@@ -46,9 +46,9 @@ namespace RoachMotel.Models
             // This is great for a software house as it is an opportunity to sell a mobile app for the cleaning staff to use.
             // We could make "The Uber of room service" and gigify room cleaning, claim a room, take pictures when done, what could possibly go wrong.
             // Also siphon a dime off every transaction ;-) 
-            foreach (var room in Rooms.Where(r => r.Status == Statuses.NEEDS_CLEANING))
+            foreach (var room in Rooms.Where(r => r.Status == Statuses.NeedsCleaning))
             {
-                room.Status = Statuses.EMPTY;
+                room.Status = Statuses.Empty;
             }
         }
     }
